@@ -1,23 +1,14 @@
 {
-  "name": "tesseract.js-offline",
-  "version": "0.1.0",
-  "description": "An example to show how to use tesseract.js in offline mode",
+  "name": "tts-1624",
+  "version": "1.0.0",
   "main": "main.js",
   "scripts": {
     "start": "http-server -p 3000 .",
     "electron": "electron .",
     "electron:build": "electron-builder build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeromewu/tesseract.js-offline.git"
-  },
-  "author": "Jerome Wu <jeromewus@gmail.com> (https://github.com/jeromewu)",
+  "author": "Artiom Veaceslav Alexandru",
   "license": "Apache 2.0",
-  "bugs": {
-    "url": "https://github.com/jeromewu/tesseract.js-offline/issues"
-  },
-  "homepage": "https://github.com/jeromewu/tesseract.js-offline#readme",
   "dependencies": {
     "tesseract.js": "^2.0.0-beta.1",
     "tesseract.js-core": "^2.0.0-beta.13"

@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     utterance.text = '';
     utterance.pitch = 0.8;
     utterance.rate = 0.8;
-    utterance.volume = 0.2;
+    utterance.volume = 1;
 
-    _configPageSetContent();
+    _setPageContent();
   });
 
   /** Init key press event listener for configuration language from keyboard */
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         break;
     }
   });
-})
+});
 
 /**
  * @description System variables
@@ -54,14 +54,14 @@ let utterance = new SpeechSynthesisUtterance();
 const setLanguage = (lang) => {
   localStorage.setItem('systemLang', lang);
   systemLang = lang;
-  _configPageSetContent();
+  _setPageContent();
 }
 
 /**
  * @description Set config page content
  * @private
  */
-const _configPageSetContent = () => {
+const _setPageContent = () => {
   const buttonSelector = document.querySelector('.config-page .button__rounded');
 
   /** Find active language and remove class active */

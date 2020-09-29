@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Tesseract.js Offline</title>
+  <title>TTS 1624</title>
+  <link rel="stylesheet" type="text/css" href="./public/style.css">
   <script src="../node_modules/tesseract.js/dist/tesseract.min.js"></script>
-  <script>
-    const { createWorker } = Tesseract;
-    const worker = createWorker({
-      workerPath: '../node_modules/tesseract.js/dist/worker.min.js',
-      langPath: '../lang-data',
-      corePath: '../node_modules/tesseract.js-core/tesseract-core.wasm.js',
-      logger: m => console.log(m),
-    });
-
-    (async () => {
-      await worker.load();
-      await worker.loadLanguage('eng');
-      await worker.initialize('eng');
-      const { data: { text } } = await worker.recognize('../images/testocr.png');
-      console.log(text);
-      await worker.terminate();
-    })();
-  </script>
+  <script src="./public/ocr.js"></script>
 </head>
-<body>
+
+<body class="ocr-read-page">
+  <div class="wrapper">
+    <div class="main__layout__wrapper" id="ocr-area">
+      <div class="page__content__wrapper">
+        <div class="video">
+          <video class="video__source" autoplay width="1920" height="1080"></video>
+          <canvas class="video__canvas" width="1920" height="1080"></canvas>
+          <button class="video__capture" onclick="capture()"></button>
+        </div>
+        <div class="scan__status disable"></div>
+        <div class="no__camera disable"></div>
+      </div>
+    </div>
+    <div class="main__layout__wrapper disable" id="read-area">
+      <div class="page__content__wrapper color_1">
+        <div class="read__area"></div>
+        <div class="sidebar__part">
+          <div class="available__colors">
+            <div class="available__colors--item color_1 active" onclick="setColor('color_1')"></div>
+            <div class="available__colors--item color_2" onclick="setColor('color_2')"></div>
+            <div class="available__colors--item color_3" onclick="setColor('color_3')"></div>
+            <div class="available__colors--item color_4" onclick="setColor('color_4')"></div>
+            <div class="available__colors--item color_5" onclick="setColor('color_5')"></div>
+          </div>
+          <div class="available__colors--back__button" onclick="setOcrAreaActive()">&#171;</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
