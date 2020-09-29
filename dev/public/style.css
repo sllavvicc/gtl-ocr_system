@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet');
+html, body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55em;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #d3d3d3;
+    background-color: #000000;
+}
+
+.page__content {
+    display: block;
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.page__content__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #000000;
+    min-height: 100vh;
+}
+
+.button__rounded {
+    display: block;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 50px;
+    color: #000000;
+    text-decoration: none;
+    background-color: #f4a261;
+    border: unset;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 14px -4px #ffffff;
+    box-shadow: 0 0 14px -4px #ffffff;
+    cursor: pointer;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    outline: unset;
+}
+
+.button__rounded:hover {
+    background-color: #ee9f5f;
+    -webkit-box-shadow: 0 0 14px -2px #ffffff;
+    box-shadow: 0 0 14px -2px #ffffff;
+}
+
+/*
+* =========== Config page START
+*/
+.config-page .page__content__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.config-page .languages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 600px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+.config-page .languages--item {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 50px;
+    color: #000000;
+    text-decoration: none;
+    background-color: #f4a261;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 14px -4px #ffffff;
+    box-shadow: 0 0 14px -4px #ffffff;
+    cursor: pointer;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    outline: unset;
+}
+
+.config-page .languages--item:hover {
+    background-color: #ee9f5f;
+    -webkit-box-shadow: 0 0 14px -2px #ffffff;
+    box-shadow: 0 0 14px -2px #ffffff;
+}
+
+.config-page .languages--item.active {
+    border: 3px solid red;
+}
